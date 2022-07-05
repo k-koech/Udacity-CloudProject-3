@@ -12,7 +12,6 @@ docker_build:
   stage: build
   script:
     # - docker-compose -f docker-compose-build.yaml build --parallel
-
     - docker build -t ./udagram-api-feed triplek254/udagram-api-feed:latest
     - docker build -t ./udagram-api-user triplek254/udagram-api-user:latest
     - docker build -t ./udagram-frontend triplek254/udagram-frontend:latest
