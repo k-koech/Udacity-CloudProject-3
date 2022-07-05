@@ -11,12 +11,12 @@ script:
 docker_build:
   stage: build
   script:
-    - docker-compose -f docker-compose-build.yaml build --parallel
+    # - docker-compose -f docker-compose-build.yaml build --parallel
 
-    - docker build -t udagram-api-feed triplek254/udagram-api-feed:latest
-    - docker build -t udagram-api-user triplek254/udagram-api-user:latest
-    - docker build -t udagram-frontend triplek254/udagram-frontend:latest
-    - docker build -t reverseproxy triplek254/reverseproxy:latest
+    - docker build -t ./udagram-api-feed triplek254/udagram-api-feed:latest
+    - docker build -t ./udagram-api-user triplek254/udagram-api-user:latest
+    - docker build -t ./udagram-frontend triplek254/udagram-frontend:latest
+    - docker build -t ./reverseproxy triplek254/reverseproxy:latest
     # docker build -t example.com/example-image:latest .
     - docker login -u triplek254 -p kelvin97?
     # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
