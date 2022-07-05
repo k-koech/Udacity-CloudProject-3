@@ -6,8 +6,7 @@ test-job1:
   script:
     - echo "This job tests something"
 
-script:
-  
+
 docker_build:
   stage: build
   script:
